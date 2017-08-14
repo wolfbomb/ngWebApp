@@ -14,6 +14,12 @@ namespace ngWebApp.Models
     
     public partial class Employee
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Employee()
+        {
+            this.Contacts = new HashSet<Contact>();
+        }
+    
         public int Id { get; set; }
         public string Name { get; set; }
         public string EmailAddress { get; set; }
@@ -21,5 +27,7 @@ namespace ngWebApp.Models
         public int DepartmentId { get; set; }
     
         public virtual Department Department { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Contact> Contacts { get; set; }
     }
 }

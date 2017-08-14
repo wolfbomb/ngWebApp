@@ -8,6 +8,10 @@
         <EntityTypeShape EntityType="ngWebAppDBModel.Department" Width="2.125" PointX="4.625" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ngWebAppDBModel.Employee" Width="1.75" PointX="2.5" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="ngWebAppDBModel.FK_Employee_Department" />
+        <EntityTypeShape EntityType="ngWebAppDBModel.Category" Width="1.5" PointX="6.75" PointY="2.875" />
+        <EntityTypeShape EntityType="ngWebAppDBModel.Contact" Width="1.5" PointX="4.875" PointY="2.875" />
+        <AssociationConnector Association="ngWebAppDBModel.FK_Contact_Category" />
+        <AssociationConnector Association="ngWebAppDBModel.FK_Contact_Employee" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
